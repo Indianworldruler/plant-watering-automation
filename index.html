@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoPlant</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to bottom right, #e8fce8, #e3f3ff);
+        min-height: 100vh;
+        color: #2f4f4f;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 60px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .logo-circle {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #7ed957;
+        margin-right: 10px;
+      }
+
+      .logo h1 {
+        font-size: 26px;
+        font-weight: 700;
+        color: #2e8b57;
+      }
+
+      /* Navbar Buttons */
+      .nav-buttons button {
+        margin-left: 12px;
+        padding: 8px 18px;
+        font-weight: 600;
+        border-radius: 20px;
+        border: 2px solid #2e8b57;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .login-btn {
+        color: #2e8b57;
+        background-color: transparent;
+      }
+
+      .login-btn:hover {
+        background-color: #c7f9cc;
+      }
+
+      .signup-btn {
+        background-color: #2e8b57;
+        color: #ffffff;
+        border: 2px solid #2e8b57;
+        font-weight: 700;
+      }
+
+      /* Main Section */
+      .main-content {
+        text-align: center;
+        margin-top: 100px;
+        padding: 20px;
+      }
+
+      .main-content h2 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #216e3a;
+        margin-bottom: 40px;
+      }
+
+      .features {
+        list-style: none;
+        font-size: 18px;
+        line-height: 2;
+        color: #3b3b3b;
+        margin-bottom: 50px;
+      }
+
+      /* Try for Free Button */
+      .try-btn {
+        background-color: #1e90ff;
+        color: white;
+        border: none;
+        padding: 12px 28px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .try-btn:hover {
+        background-color: #0077e6;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo-circle"></div>
+        <h1>GoPlant</h1>
+      </div>
+      <div class="nav-buttons">
+        <button class="login-btn">Login</button>
+        <button class="signup-btn">Sign Up</button>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="main-content">
+      <h2>Your Smart Watering Companion 🌱</h2>
+      <ul class="features">
+        <li>• Realtime alerts on the web application to build watering habits</li>
+        <li>• Giving different watering suggestions per week</li>
+        <li>• Watering guidance document</li>
+      </ul>
+      <button class="try-btn">Try for Free</button>
+    </main>
+  </body>
+</html>
