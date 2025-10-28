@@ -1,1 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoPlant - Suggestions</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to bottom right, #e8fce8, #e3f3ff);
+        min-height: 100vh;
+        color: #2f4f4f;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 60px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .logo-circle {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #7ed957;
+        margin-right: 10px;
+      }
+
+      .logo h1 {
+        font-size: 26px;
+        font-weight: 700;
+        color: #2e8b57;
+      }
+
+      /* Navbar Buttons */
+      .nav-buttons button {
+        margin-left: 12px;
+        padding: 8px 18px;
+        font-weight: 600;
+        border-radius: 20px;
+        border: 2px solid #2e8b57;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .login-btn {
+        color: #2e8b57;
+        background-color: transparent;
+      }
+
+      .login-btn:hover {
+        background-color: #c7f9cc;
+      }
+
+      .signup-btn {
+        background-color: #2e8b57;
+        color: #ffffff;
+        border: 2px solid #2e8b57;
+        font-weight: 700;
+      }
+
+      /* Suggestions Section */
+      .suggestions {
+        text-align: center;
+        margin-top: 80px;
+        padding: 20px;
+      }
+
+      .suggestions h2 {
+        font-size: 30px;
+        color: #216e3a;
+        margin-bottom: 30px;
+      }
+
+      .suggestion-boxes {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .suggestion-card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        padding: 25px;
+        transition: transform 0.3s ease;
+      }
+
+      .suggestion-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .suggestion-card h3 {
+        color: #2e8b57;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .suggestion-card p {
+        color: #3b3b3b;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo" onclick="window.location.href='document.html'">
+        <div class="logo-circle"></div>
+        <h1>GoPlant</h1>
+      </div>
+      <div class="nav-buttons">
+        <button class="login-btn" onclick="window.location.href='alert.html'">Login</button>
+        <button class="signup-btn" onclick="window.location.href='suggestions.html'">Sign Up</button>
+      </div>
+    </nav>
+
+    <!-- Suggestions Section -->
+    <section class="suggestions">
+      <h2>Watering & Health Suggestions for Your Succulent 🌵</h2>
+
+      <div class="suggestion-boxes">
+        <div class="suggestion-card">
+          <h3>💧 Watering Frequency</h3>
+          <p>Water your succulent once every 10–14 days. Allow the soil to dry completely before watering again.</p>
+        </div>
+
+        <div class="suggestion-card">
+          <h3>🌞 Sunlight Needs</h3>
+          <p>Place your plant near a window with bright indirect light. Avoid harsh direct sun for long hours.</p>
+        </div>
+
+        <div class="suggestion-card">
+          <h3>🌿 Health Tip</h3>
+          <p>Check the leaves — if they look wrinkled, it needs water; if mushy, it’s overwatered.</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
 
