@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoPlant - Chat Bot</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to bottom right, #e8fce8, #e3f3ff);
+        min-height: 100vh;
+        color: #2f4f4f;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 60px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .logo-circle {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #7ed957;
+        margin-right: 10px;
+      }
+
+      .logo h1 {
+        font-size: 26px;
+        font-weight: 700;
+        color: #2e8b57;
+      }
+
+      /* Chatbot Section */
+      .chatbot-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+      }
+
+      .chatbot-container h2 {
+        font-size: 32px;
+        color: #216e3a;
+        margin-bottom: 20px;
+      }
+
+      .chatbox {
+        width: 600px;
+        height: 600px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .messages {
+        flex-grow: 1;
+        overflow-y: auto;
+        margin-bottom: 15px;
+        padding-right: 10px;
+      }
+
+      .message {
+        margin: 10px 0;
+        padding: 12px 16px;
+        border-radius: 15px;
+        max-width: 80%;
+        font-size: 15px;
+      }
+
+      .user {
+        align-self: flex-end;
+        background-color: #c7f9cc;
+      }
+
+      .bot {
+        align-self: flex-start;
+        background-color: #d8efff;
+      }
+
+      .input-area {
+        display: flex;
+        gap: 10px;
+      }
+
+      .input-area input {
+        flex-grow: 1;
+        padding: 12px 18px;
+        border: 2px solid #2e8b57;
+        border-radius: 25px;
+        font-size: 15px;
+        outline: none;
+      }
+
+      .input-area button {
+        background-color: #2e8b57;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 12px 25px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+
+      .input-area button:hover {
+        background-color: #256d45;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo" onclick="window.location.href='document.html'">
+        <div class="logo-circle"></div>
+        <h1>GoPlant</h1>
+      </div>
+    </nav>
+
+    <!-- Chatbot Section -->
+    <div class="chatbot-container">
+      <h2>GoPlant Chat Bot 💬</h2>
+      <div class="chatbox">
+        <div class="messages" id="messages">
+          <div class="message bot">
+            Hi! 🌱 I’m your GoPlant assistant. How can I help you today?
+          </div>
+        </div>
+        <div class="input-area">
+          <input type="text" id="userInput" placeholder="Type your message..." />
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function sendMessage() {
+        const input = document.getElementById("userInput");
+        const messages = document.getElementById("messages");
+        const userText = input.value.trim();
+
+        if (userText !== "") {
+          const userMessage = document.createElement("div");
+          userMessage.classList.add("message", "user");
+          userMessage.textContent = userText;
+          messages.appendChild(userMessage);
+
+          const botMessage = document.createElement("div");
+          botMessage.classList.add("message", "bot");
+          botMessage.textContent =
+            "Got it! 🌿 (This is a demo chatbot message placeholder)";
+          messages.appendChild(botMessage);
+
+          input.value = "";
+          messages.scrollTop = messages.scrollHeight;
+        }
+      }
+    </script>
+  </body>
+</html>
