@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoPlant - Realtime Alert</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to bottom right, #e8fce8, #e3f3ff);
+        min-height: 100vh;
+        color: #2f4f4f;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 15px 60px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .logo-circle {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #7ed957;
+        margin-right: 10px;
+      }
+
+      .logo h1 {
+        font-size: 26px;
+        font-weight: 700;
+        color: #2e8b57;
+      }
+
+      /* Alert Section */
+      .alert-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 120px;
+        padding: 30px;
+      }
+
+      .alert-box {
+        background-color: #ffffff;
+        border-left: 8px solid #2e8b57;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        padding: 30px 40px;
+        max-width: 600px;
+        animation: pop 0.6s ease;
+      }
+
+      @keyframes pop {
+        0% {
+          transform: scale(0.95);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .alert-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #2e8b57;
+        margin-bottom: 10px;
+      }
+
+      .alert-text {
+        font-size: 18px;
+        color: #3a3a3a;
+        line-height: 1.6;
+      }
+
+      .alert-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #1e90ff;
+        color: white;
+        font-weight: 600;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .alert-btn:hover {
+        background-color: #0077e6;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo-circle"></div>
+        <h1>GoPlant</h1>
+      </div>
+    </nav>
+
+    <!-- Realtime Alert Section -->
+    <section class="alert-section">
+      <div class="alert-box">
+        <h2 class="alert-title">🌱 Watering Reminder!</h2>
+        <p class="alert-text">
+          Hey there! It’s time to water your <strong>Money Plant</strong> 🌿.<br />
+          Recommended: <strong>200ml of water</strong> today.<br />
+          Soil is getting dry — water evenly and avoid overwatering.
+        </p>
+        <button class="alert-btn">Mark as Done ✅</button>
+      </div>
+    </section>
+  </body>
+</html>
