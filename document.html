@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoPlant - Watering Guidance</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to bottom right, #e8fce8, #e3f3ff);
+        min-height: 100vh;
+        color: #2f4f4f;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 60px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .logo-circle {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #7ed957;
+        margin-right: 10px;
+      }
+
+      .logo h1 {
+        font-size: 26px;
+        font-weight: 700;
+        color: #2e8b57;
+      }
+
+      /* Navbar Buttons */
+      .nav-buttons button {
+        margin-left: 12px;
+        padding: 8px 18px;
+        font-weight: 600;
+        border-radius: 20px;
+        border: 2px solid #2e8b57;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .login-btn {
+        color: #2e8b57;
+        background-color: transparent;
+      }
+
+      .login-btn:hover {
+        background-color: #c7f9cc;
+      }
+
+      .signup-btn {
+        background-color: #2e8b57;
+        color: #ffffff;
+        border: 2px solid #2e8b57;
+        font-weight: 700;
+      }
+
+      /* Document Section */
+      .document-section {
+        max-width: 900px;
+        margin: 60px auto;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+      }
+
+      .document-section h2 {
+        text-align: center;
+        color: #216e3a;
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+
+      .section {
+        margin-bottom: 35px;
+      }
+
+      .section h3 {
+        color: #2e8b57;
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      .section p {
+        color: #3b3b3b;
+        line-height: 1.8;
+        font-size: 16px;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 40px;
+        color: #1e90ff;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .footer:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo" onclick="window.location.href='document.html'">
+        <div class="logo-circle"></div>
+        <h1>GoPlant</h1>
+      </div>
+      <div class="nav-buttons">
+        <button class="login-btn" onclick="window.location.href='alert.html'">
+          Login
+        </button>
+        <button class="signup-btn" onclick="window.location.href='suggestions.html'">
+          Sign Up
+        </button>
+      </div>
+    </nav>
+
+    <!-- Watering Guidance Document -->
+    <section class="document-section">
+      <h2>🌿 Watering Guidance Document</h2>
+
+      <div class="section">
+        <h3>💧 1. Building Watering Habits</h3>
+        <p>
+          Create a consistent watering schedule based on your plant type. Use digital reminders or this web app to stay regular. Observe your plant’s response — consistency helps plants grow healthier roots and improves your connection with them.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>🌱 2. How to Water Plants</h3>
+        <p>
+          Always water near the soil, not directly on the leaves. Ensure excess water drains properly to avoid root rot. For indoor plants, use room-temperature water and water slowly until the soil feels evenly moist.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>🚿 3. Watering Techniques</h3>
+        <p>
+          Try the “soak and dry” method — water thoroughly, then wait until the top inch of soil is dry before watering again. Mist leaves only for humidity-loving plants like ferns or peace lilies.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>🌻 4. Plant Health & Care</h3>
+        <p>
+          Keep your plants in clean pots with proper drainage. Rotate them weekly for even sunlight exposure. Wipe the leaves gently with a damp cloth to remove dust and improve photosynthesis.
+        </p>
+      </div>
+
+      <div class="footer" onclick="window.location.href='index.html'">
+        ← Back to Home
+      </div>
+    </section>
+  </body>
+</html>
